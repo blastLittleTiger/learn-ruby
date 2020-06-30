@@ -19,6 +19,13 @@ print(test)
 
 # file, 文件的简单读写
 myfile = File.new("D:/1.txt", "r+")
+ex = File.exist?("D:/111.txt")
+# 如果此文件不存在，则创建一个文件，并且写入
+if (ex.equal?(false ))
+  file_new = File.new("d://xxxx.txt", "w+")
+  file_new.puts "hello world!"
+  file_new.close;
+end
 puts myfile.path
 readlines = myfile.readlines
 puts readlines
